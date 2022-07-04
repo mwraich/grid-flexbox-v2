@@ -153,14 +153,35 @@ figcaption a {
     display: block;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+footer li {
+    list-style: none;
+}
+
+footer ul {
+    display: flex;
+    gap: 2%;
+}
+
+footer address { 
+    padding-bottom: 1rem;
+}
 
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
+    footer { 
+        flex-direction: row;
+        justify-content: space-around;
+    }
     section ul {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     section li {
         flex-basis: 49.5%;
@@ -187,6 +208,12 @@ figcaption a {
         margin-left: 100px;
     }
     section li {
+        flex-basis: 32.5%;
+    }
+    footer address {
+        flex-basis: 40%;
+    }
+    footer .social {
         flex-basis: 32.5%;
     }
 }
