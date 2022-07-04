@@ -59,8 +59,11 @@ section ul {
 /* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
 
 Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
+#mission img {
+    width: 100%;
+}
 
-figure {
+#collections figure {
     margin: 0 0 0.5rem 0;
     padding: 0;
     max-height: 400px;
@@ -156,6 +159,14 @@ figcaption a {
     figure img {
         object-position: 0;
     }
+    .missiontext {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .missiontext p {
+        flex-basis: 67%;
+    }
+
 }
 
 @media (min-width: 800px) {
